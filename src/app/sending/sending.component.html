@@ -1,0 +1,42 @@
+<body><div class="topnav">
+  <a  href="">Home</a>
+  <a href="rep">Replenishment</a>
+  <a href="cards">Payment</a>
+  <a class="active" href="send">Tranfer Money</a>
+  <a href="Account">Account Details</a>
+  <a href="history">History</a>
+  <button (click)="loqout()">Log out</button>
+</div>
+<hr>
+<br>
+<div class="qq" [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <h1>Transfer Money</h1>
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input type="text" class="form-control"  placeholder="Amount.." id="amount" required [(ngModel)]="amount" name="amount">
+    </div>
+    <div class="form-group">
+      <label for="userID">Receiver Name</label>
+      <input type="text" class="form-control" placeholder="Id.." id="userID" required [(ngModel)]="userID" name="userID">
+    </div>
+    <div >
+      <label >Card Number</label>
+      <input type="text" class="form-control" placeholder="Card Number.."  name="amount">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
+<br>
+<br>
+
+
+{{amount}}
+{{userID}}
+</body>

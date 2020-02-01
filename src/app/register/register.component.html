@@ -1,0 +1,44 @@
+<body><div class="topnav">
+  <a class="active" href="">Home</a>
+  <a href="rep">Replenishment</a>
+  <a href="cards">Payment</a>
+  <a href="send">Tranfer Money</a>
+  <a href="Account">Account Details</a>
+  <a href="history">History</a>
+</div>
+<br>
+
+<div class="qq" [hidden]="submitted" style="width: 400px;">
+  <h3 *ngIf="error">{{error}}</h3>
+  <h1>Register</h1>
+  <hr>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="user.fullName" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="username">Username</label>
+
+      <input type="text" class="form-control" id="username" required [(ngModel)]="user.username" name="username">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+    </div>
+
+    <div class="form-group">
+      <label for="pass">Confirm Password</label>
+      <input type="password" class="form-control" id="pass" required [(ngModel)]="pass" name="pass">
+    </div>
+
+    <button (click)="register()" class="btn btn-success">Register</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
+</body>

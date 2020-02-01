@@ -1,0 +1,30 @@
+<body><div class="topnav">
+  <a class="active" href="">Home</a>
+  <a href="rep">Replenishment</a>
+  <a href="cards">Payment</a>
+  <a href="send">Tranfer Money</a>
+  <a href="Account">Account Details</a>
+  <a href="history">History</a>
+</div>
+<br>
+<br>
+<div class="qq" [hidden]="submitted" style="width: 400px;">
+  {{error}}
+  <form (ngSubmit)="onSubmit()">
+    <h1>Login</h1>
+    <div class="form-group">
+      <label for="amount">Name</label>
+      <input type="text" class="form-control"  placeholder="name" id="amount" required [(ngModel)]="userName" name="amount">
+    </div>
+    <div class="form-group">
+      <label for="userID">Password</label>
+      <input  type="password" class="form-control " placeholder="      password" id="userID" required [(ngModel)]="password" name="userID">
+    </div>
+<br>
+
+    <br>
+    <button style="margin-left: 20px;" type="submit" class="btn btn-success">Submit</button>
+    <button style="margin-left: 50px;" class="btn btn-success"><a href="/register">Register</a></button>
+  </form>
+</div>
+</body>

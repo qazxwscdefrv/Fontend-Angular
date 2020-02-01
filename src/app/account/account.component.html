@@ -1,0 +1,37 @@
+<body><div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="topnav">
+      <a href="">Home</a>
+      <a href="rep">Replenishment</a>
+      <a href="cards">Payment</a>
+      <a href="send">Tranfer Money</a>
+      <a class="active" href="Account">Account Details</a>
+      <a href="history">History</a>
+      <button (click)="loqout()">Log out</button>
+    </div>
+  </div>
+
+</div>
+<hr>
+<br>
+
+<div class="reps accounts">
+  <div><img src="assets/account.png" alt="Denim Jeans" style="width:200px;"></div>
+ <div style="margin-left:20px;"> <div *ngIf="reps">
+    <label> Id </label><br>
+    <input type="text" placeholder=" {{reps.id}}"> <br><br>
+   <label> Name </label><br>
+   <input type="text" placeholder=" {{reps.userID}}"><br><br>
+    <label> Amount </label><br>
+    <input type="text" placeholder=" {{reps.amount}}"> <br><br>
+    <label> Card Number </label><br>
+    <input type="text" placeholder=" {{reps.cardNumber}}"><br><br>
+
+<!--    <h1>Id: {{reps.id}}</h1>-->
+<!--    <p>Name : {{reps.amount}}</p>-->
+<!--    <p>Card Number: {{reps.cardNumber}}</p>-->
+<!--    <button (click)="addAmount(reps.id)">Catalog</button>-->
+  </div>
+ </div>
+</div>
+</body>

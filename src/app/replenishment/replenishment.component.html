@@ -1,0 +1,29 @@
+<body>
+<div class="topnav">
+  <a href="">Home</a>
+  <a class="active" href="rep">Replenishment</a>
+  <a href="cards">Payment</a>
+  <a href="send">Tranfer Money</a>
+  <a href="Account">Account Details</a>
+  <a href="history">History</a>
+  <button (click)="loqout()">Log out</button>
+</div>
+
+<hr>
+<br>
+<br>
+<div class="qq" [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <h1 style="margin-left: 70px;">Replenishment</h1>
+    <div class="form-group">
+      <label style="font-size: 20px;" for="amount">Amount</label>
+      <input type="text" class="form-control" id="amount" placeholder="Amount.." required [(ngModel)]="rep.amount" name="amount">
+    </div>
+
+    <button  style="margin-left: 20px; color: black;" type="submit" class="btn btn-success">Replenishment</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div></body>
